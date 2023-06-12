@@ -375,23 +375,10 @@ footer {
   display: flex;
   border: 1px solid var(--color1);
   margin-top: 1rem;
-  background-image: linear-gradient(
-    to right top,
-    var(--color1),
-    var(--color1),
-    var(--color1),
-    var(--color1),
-    var(--color4)
-  );
-  animation: bg 5s infinite;
   justify-content: space-around;
   align-items: center;
 }
-.icons div i:hover {
-  color: var(--color);
-}
-
-@media only screen and (max-width: 320px) {
+@media only screen and (min-width: 320px) and (max-width: 414px) {
   html {
     font-size: 11px;
   }
@@ -508,6 +495,12 @@ footer {
   html {
     font-size: 13px;
   }
+  .cards {
+    grid-template-columns: auto auto;
+  }
+  .nav {
+    width: 94.5%;
+  }
 }
 @media only screen and (max-width: 768px) {
   html {
@@ -520,8 +513,7 @@ footer {
     margin: auto;
   }
   .nav {
-    width: 99%;
-    margin: 0;
+    width: 94.5%;
   }
   .cards {
     grid-template-columns: auto;

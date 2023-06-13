@@ -1,3 +1,4 @@
+/* defult setting */
 * {
   padding: 0;
   margin: 0;
@@ -6,6 +7,11 @@
   outline: none;
   scroll-behavior: smooth;
 }
+::selection {
+  color: black;
+  font-weight: bold;
+  background: var(--color);
+}
 
 :root {
   --color: #ff0060;
@@ -13,6 +19,9 @@
   --color2: #fc156d;
   --color3: #5d07ce;
   --color4: #d43fc5;
+  --color5: #9961ea;
+  --color6: #f40f94;
+  --color7: #ff0060;
 }
 body {
   background: #eee;
@@ -25,32 +34,25 @@ body {
 html {
   font-size: 16px;
 }
+span {
+  color: #5d07ce;
+  font-weight: 500;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+/* defult setting */
+
 nav {
-  background-image: linear-gradient(
-    to right top,
-    var(--color1),
-    var(--color1),
-    var(--color1),
-    var(--color1),
-    var(--color4)
-  );
   z-index: 999;
-  width: 98.5%;
+  width: 100%;
   background-size: cover;
   animation: bg 5s infinite;
-  margin: 10px;
-  margin-top: 0;
   display: flex;
   border-radius: 6px;
   justify-content: space-between;
   align-items: center;
   position: fixed;
 }
-::selection {
-  color: black;
-  font-weight: bold;
-  background: var(--color);
-}
+
 .logo img {
   height: 6rem;
 }
@@ -90,6 +92,9 @@ ul li a:hover {
   font-size: 1.3rem;
 }
 .icons div:hover {
+  color: var(--color);
+}
+.icons div:hover {
   cursor: pointer;
 }
 .icons div {
@@ -104,15 +109,16 @@ ul li a:hover {
   z-index: 500;
   background-image: linear-gradient(
     to right top,
-    #ff0060,
-    #f40f94,
+    var(--color),
+    var(--color2),
     #d43fc5,
     #9961ea,
-    #0079ff
+    var(--color1)
   );
   background-size: cover;
   animation: bg 5s infinite;
 }
+
 @keyframes bg {
   0%,
   100% {
@@ -222,11 +228,11 @@ section {
   position: absolute;
   background-image: linear-gradient(
     to right top,
-    #ff0060,
-    #f40f94,
-    #d43fc5,
-    #9961ea,
-    #0079ff
+    var(--color7),
+    var(--color6),
+    var(--color4),
+    var(--color5),
+    var(--color1)
   );
   background-size: cover;
   height: 2%;
@@ -277,7 +283,8 @@ section {
   -webkit-user-drag: none;
   -webkit-user-select: none;
 }
-/* js code */
+
+/* complete in js code */
 @keyframes rotate3d {
   0%,
   100% {
@@ -378,6 +385,63 @@ footer {
   justify-content: space-around;
   align-items: center;
 }
+footer .logo img {
+  height: 5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* toggle mode */
+.switch {
+  color: white;
+  background: #18122b;
+}
+.mode {
+  cursor: pointer;
+}
+.sec_color {
+  background-image: linear-gradient(
+    to right top,
+    #393053,
+    #3c3358,
+    #3f365d,
+    #413963,
+    #443c68
+  );
+}
+.navWords {
+  color: white;
+}
+/* toggle mode */
+
+/* dark mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #18122b;
+    color: white;
+  }
+  .sec-1 {
+    background-image: linear-gradient(
+      to right top,
+      #393053,
+      #3c3358,
+      #3f365d,
+      #413963,
+      #443c68
+    );
+  }
+  nav {
+    background: transparent;
+  }
+  ul li a {
+    color: white;
+  }
+  span {
+    color: var(--color7);
+  }
+}
+/* dark mode */
+
 @media only screen and (min-width: 320px) and (max-width: 414px) {
   html {
     font-size: 11px;

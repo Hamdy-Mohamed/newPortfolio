@@ -551,13 +551,13 @@ iframe {
 .cards {
   display: -ms-grid;
   display: grid;
-  gap: 10px;
+  gap: 2rem;
   -ms-grid-columns: auto 10px auto 10px auto;
   grid-template-columns: auto auto auto;
 }
 .card {
   background-color: #00f;
-  margin-top: 20px;
+  margin-top: 0px;
   height: 27rem;
   width: 21rem;
   position: relative;
